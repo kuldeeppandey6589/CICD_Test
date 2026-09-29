@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  web-app:
+    image: ghcr.io/robotutortech/test:latest
+    container_name: production_app
+    restart: always
+    ports:
+      - 3000:3000" # Bind to localhost only so it's not publicly open
+    environment:
+      - NODE_ENV=production
+                                                                               
